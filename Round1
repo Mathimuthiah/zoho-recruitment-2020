@@ -1,0 +1,42 @@
+package com.zoho;
+
+public class Printing_letters {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		String input="WELCOME";
+		
+		char input_arr[]= input.toCharArray();
+		int len=input_arr.length;
+		int m=(input.length()-1 )/2;
+		int k1=0;
+		int i=0, j=0;
+		while (i<len)
+		{
+			for( j=len-1-i;j>=0;j--)
+			{
+				System.out.print(" ");
+						
+			}
+			
+			for(int k=0;k<=i;k++)
+			{
+				
+				if(m+k<len)
+				 System.out.print(input_arr[m+k]);
+				else if(m+k>=len)
+				   System.out.print(input_arr[m+k-len]);
+				  
+			}
+			
+			System.out.println("");
+			
+			i++;
+		}
+		
+		
+	}
+
+}
